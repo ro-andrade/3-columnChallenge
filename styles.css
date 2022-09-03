@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+}
+
+:root {
+    --sedans-cardColor: hsl(31, 77%, 52%);
+    --suv-cardColor: hsl(184, 100%, 22%);
+    --luxury-cardColor: hsl(179, 100%, 13%);
+    --pColor: hsla(0, 0%, 100%, 0.75);
+    --bg-h1-buttonColor: hsl(0, 0%, 95%);
+}
+
+/* Desktop */
+
+body {
+    background-color: var(--bg-h1-buttonColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+.pageWrapper {
+    display: flex;
+}
+
+.card {
+    padding: 40px;
+}
+
+.sedansCard {
+    background-color: var(--sedans-cardColor);
+    border-radius: 10px 0 0 10px;
+}
+
+.suvsCard {
+    background-color: var(--suv-cardColor);
+}
+
+.luxuryCard {
+    background-color: var(--luxury-cardColor);
+    border-radius: 0 10px 10px 0;
+}
+
+.icons {
+    width: 55px
+}
+
+.h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--bg-h1-buttonColor);
+    padding: 30px 0 30px 0;
+}
+
+.p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--pColor);
+    padding: 0 0 80px 0;
+}
+
+.buttons {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 0 0 10px 0;
+    border-radius: 500px;
+    background-color: var(--bg-h1-buttonColor);
+    border: 1.5px;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    color: var(--bg-h1-buttonColor);
+    background-color: transparent;
+    outline: solid 2px var(--bg-h1-buttonColor);
+}
+
+.sedansButton {
+    color: var(--sedans-cardColor);
+}
+
+.suvsButton {
+    color: var(--suv-cardColor);
+}
+
+.luxuryButton {
+    color: var(--luxury-cardColor)
+}
+
+
+
+footer {
+    font-family: 'Lexend Deca', sans-serif;
+    position: absolute;
+    bottom: 0;
+    margin: 50px 0 5px 0;
+    max-width: fit-content;
+    text-align: center;
+}
+
+footer > a, a:hover, a:visited {
+    color: var(--suv-cardColor)
+}
+
+@media screen and (max-width: 375px) {
+    .pageWrapper {
+        display: block;
+        margin: 40px 0 60px 0;
+    }
+
+    .sedansCard {
+        border-radius: 10px 10px 0 0;
+    }
+    
+    
+    .luxuryCard {
+        border-radius: 0 0 10px 10px;
+    }
+    
+}
